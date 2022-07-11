@@ -1,1 +1,164 @@
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~ (main)
+$ mkdir <learn_git>
+bash: syntax error near unexpected token `newline'
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~ (main)
+$ git mkdir <learn_git>
+bash: syntax error near unexpected token `newline'
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~ (main)
+$
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~ (main)
+$ mkdir<learn_git>
+bash: syntax error near unexpected token `newline'
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~ (main)
+$ mkdir lean_git
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~ (main)
+$
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~ (main)
+$ mkdir learn_git
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~ (main)
+$ cd learn_git
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (main)
+$ mkdir third.txt
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (main)
+$ git init .
+Initialized empty Git repository in C:/Users/Mtpro/learn_git/.git/
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git add .
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git commit "adding third.txt"
+error: pathspec 'adding third.txt' did not match any file(s) known to git
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git commit "third.txt"
+error: pathspec 'third.txt' did not match any file(s) known to git
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git -m
+unknown option: -m
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git add "third.txt"
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git commit -m "adding third.txt"
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ mkdir fourth.txt
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git rm third.txt
+fatal: pathspec 'third.txt' did not match any files
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ rm third.txt
+rm: cannot remove 'third.txt': Is a directory
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git add "fouth.txt"
+fatal: pathspec 'fouth.txt' did not match any files
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git add "fourth.txt"
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git commit -m "adding fourth.txt"
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ rm third.txt
+rm: cannot remove 'third.txt': Is a directory
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ rm -r third.txt
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git add .
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git commit -m "removing third.txt"
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ core.pager=cat
+bash: core.pager=cat: command not found
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git core.pager=cat
+git: 'core.pager=cat' is not a git command. See 'git --help'.
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git congfig --global core.pager'cat'
+git: 'congfig' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git config --global core.pager ''
+
+Mtpro@DESKTOP-TJJ5606 MINGW64 ~/learn_git (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=bileltlijani75@gmail.com
+user.name=bilel
+user.emai=bileltlijani75@gmail.com
+color.ui=auto
+core.pager=
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
 
